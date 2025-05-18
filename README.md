@@ -1,6 +1,6 @@
 # VulnLocAI
 
-This repository is the replication package of "A Lightweight, Fine-Tuned Domain-Specific Large Language Model for Java Vulnerability Detection"
+This repository is the replication package of "VulnLocAI: Lightweight Java Vulnerability Detection with Fine-Tuned Domain Specific Large Language Models"
 
 ## Overview
 
