@@ -1,50 +1,86 @@
+<div align="center">
+
 # VulnLocAI
 
-This repository is the replication package of "VulnLocAI: Lightweight Java Vulnerability Detection with Fine-Tuned Domain Specific Large Language Models"
+### Lightweight Java Vulnerability Detection with Fine-Tuned Domain-Specific Large Language Models
 
-## Overview
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Jupyter](https://img.shields.io/badge/jupyter-notebook-orange.svg)](https://jupyter.org/)
 
-VulnLocAI is a specialized language model designed to detect vulnerabilities in Java code. Unlike traditional large language models (LLMs), VulnLocAI is specifically fine-tuned on a domain-specific dataset of Java vulnerabilities, making it more efficient and accurate for this specific task.
 
-## Key Features
+</div>
 
-- **Domain-Specific Fine-Tuning**: Trained on 10,000 real-world vulnerable code snippets from 907 open-source Java projects
-- **High-Precision Detection**: Achieves 96.39% precision, 99.58% recall, and 97.96% F1-score
-- **CWE ID Prediction**: Identifies both Common Weakness Enumeration (CWE) IDs and exact line numbers of vulnerabilities
-- **Outperforms State-of-the-Art**: Demonstrated superior performance compared to major LLMs including:
-  - ChatGPT-4 (16.3% relative improvement)
-  - Claude 3.5 Sonnet (20.5% relative improvement)
-  - Gemini 2.0 Flash (23.5% relative improvement)
-  - Llama 3.2 (1B) (42.9% improvement)
-- **Lightweight Architecture**: Optimized for practical use in real-world development environments
-- **Open-Source**: Fully transparent and extensible implementation
+---
 
-## Installation
+## 📋 Overview
 
-1. Clone the repository:
+**VulnLocAI** is a lightweight, domain-specific large language model (DSLLM) designed to detect vulnerabilities in Java code with exceptional accuracy and efficiency. Built by fine-tuning Meta's Llama 3.2 (1B parameters), VulnLocAI addresses the critical limitations of general-purpose LLMs—high computational costs, privacy concerns, and lack of domain specialization—while delivering superior vulnerability detection performance.
+
+## 📁 Repository Structure
+
+```
+VulnLocAI-Repo/
+│
+├── 📓 VulnLocAI.ipynb                    # Main training notebook
+├── 📓 alpaca_format_dataset.ipynb        # convert the dataset into Alpaca-formatted
+├── 📄 README.md                          
+│
+├── 📂 training dataset/
+│   ├── dataset.csv.zip                   # Original training dataset (20,000 snippets)
+│   └── alpaca_format_dataset.csv.zip     # Alpaca-formatted dataset
+│
+├── 📂 Evaluation-Benchmark/
+│   ├── README.md                         
+│   └── SVD-Benchmark.csv                 # Evaluation benchmark (5,054 snippets)
+│
+└── 📂 Results/
+    ├── Evaluation_Result.csv             
+    ├── Analysis Result By CWE Types.csv  
+    └── AnalysisByProjects/               
+        ├── Identified vulnerabilities Rate.png
+        └── Number of Identified Vulnerabilities.png
+```
+
+---
+
+## 🔧 Installation
+
+### Prerequisites
+- Python 3.8 or higher
+- Jupyter Notebook
+### Quick Start
+
+1️⃣ **Clone the repository:**
 ```bash
 git clone https://github.com/Wala-Alnozmai/VulnLocAI.git
 cd VulnLocAI
 ```
 
-2. To reproduce the training process, run the Jupyter notebook:
+2️⃣ **Install dependencies** (automatically handled in notebooks)
+```bash
+pip install torch transformers datasets trl unsloth
+```
+
+3️⃣ **Launch Jupyter Notebook:**
 ```bash
 jupyter notebook VulnLocAI.ipynb
 ```
 
-The notebook contains all the necessary steps and dependencies required to reproduce the training process. Follow the instructions within the notebook to train your own instance of VulnLocAI.
+4️⃣ **Follow the notebook instructions** to reproduce the training process or use the pre-trained model!
 
+---
 
-## Citation
+## 🎓 Citation
 
-If you use this tool in your research, please cite:
+If you use VulnLocAI in your research, please cite:
 
-```
-@article{vulnlocai,
-    title={VulnLocAI: A Java Vulnerability Detection Tool with Fine-Tuned Open-Source Small Language Models},
-    author={Wala Alnozmai, Obieda Ananbeh, and Dae-Kyoo Kima},
-    year={2025}
+```bibtex
+@article{vulnlocai2025,
+    title={VulnLocAI: Lightweight Java Vulnerability Detection with Fine-Tuned Domain Specific Large Language Models},
+    author={Wala Alnozmai and Obieda Ananbeh and Dae-Kyoo Kim},
+    journal={},
+    year={2025},
+    publisher={}
 }
 ```
-
 
