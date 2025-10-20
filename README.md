@@ -34,7 +34,6 @@ VulnLocAI-Repo/
 │   └── SVD-Benchmark.csv                 # Evaluation benchmark (5,054 snippets)
 │
 └── 📂 Results/
-    ├── Evaluation_Result.csv             
     ├── Analysis Result By CWE Types.csv  
     └── AnalysisByProjects.csv             
 ```
