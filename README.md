@@ -36,9 +36,7 @@ VulnLocAI-Repo/
 └── 📂 Results/
     ├── Evaluation_Result.csv             
     ├── Analysis Result By CWE Types.csv  
-    └── AnalysisByProjects/               
-        ├── Identified vulnerabilities Rate.png
-        └── Number of Identified Vulnerabilities.png
+    └── AnalysisByProjects.csv             
 ```
 
 ---
