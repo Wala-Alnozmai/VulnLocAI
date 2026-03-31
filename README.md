@@ -76,7 +76,7 @@ If you use VulnLocAI in your research, please cite:
     title={VulnLocAI: Lightweight Java Vulnerability Detection with Fine-Tuned Domain Specific Large Language Models},
     author={Wala Alnozmai and Obieda Ananbeh and Dae-Kyoo Kim},
     journal={},
-    year={2026},
+    year={2025},
     publisher={}
 }
 ```
